@@ -1,0 +1,16 @@
+body {
+  /* font-family: ivypresto-display, serif; */
+}
+
+header {
+  width: 100%;
+  height: 110px;
+  position: fixed;
+  background-color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 110px;
+}
