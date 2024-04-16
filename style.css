@@ -1,5 +1,5 @@
 body {
-  /* font-family: ivypresto-display, serif; */
+
 }
 
 header {
@@ -13,4 +13,35 @@ main {
   display: flex;
   flex-direction: column;
   padding-top: 110px;
+  font-family: ivypresto-display, serif;
+}
+
+#video-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px #000000;
+}
+
+.ma {
+  padding: 100px 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  .ma-header {
+    --bs-text-opacity: 1;
+    color: var(--bs-secondary-color) !important;
+  }
+  .ma-main {
+    padding-top: 15px;
+    line-height: 3.5;
+  }
+
+  .ma-footer {
+    font-style: italic;
+    padding: 20px 100px;
+  }
 }
