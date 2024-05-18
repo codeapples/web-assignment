@@ -7,16 +7,111 @@
     <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
   </head>
+
   <body>
-    <header class="d-flex flex-column justi align-items-center z-5">
-      <!-- first row -->
-      <div
-        class="row container py-3 w-100 align-items-center"
-        style="height: 75px"
-      >
-        <!-- contact info -->
-        <div class="col-5 text-start container-fluid">
-          <div class="col">
+    <!-- HEADER -->
+    <header>
+      <!-- TOP ROW -->
+      <div class="row header-top">
+        <!-- hamburger & contact info -->
+        <div class="col col-md-5 info-container">
+          <!-- mobile only nav - hamburget & overlay -->
+          <nav class="navbar navbar-mobile">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNav"
+              aria-controls="offcanvasNav"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="offcanvas offcanvas-start text-bg-light"
+              tabindex="-1"
+              id="offcanvasNav"
+            >
+              <div class="offcanvas-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Rooms</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Services</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#"
+                      >Reservation</a
+                    >
+                  </li>
+                </ul>
+
+                <!-- social icons in the middle below -->
+                <div class="nav-socials">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                  >
+                    <g fill="currentColor">
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10m-3 5a3 3 0 1 0 6 0a3 3 0 0 0-6 0"
+                        clip-rule="evenodd"
+                      />
+                      <path d="M18 5a1 1 0 1 0 0 2a1 1 0 0 0 0-2" />
+                      <path
+                        fill-rule="evenodd"
+                        d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zm14 2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"
+                        clip-rule="evenodd"
+                      />
+                    </g>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M8 3a2 2 0 0 1 2 2v3h6a2 2 0 1 1 0 4h-6v2a3 3 0 0 0 3 3h3a2 2 0 1 1 0 4h-3a7 7 0 0 1-7-7V5a2 2 0 0 1 2-2"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+              </div>
+            </div>
+          </nav>
+          <div class="header-info">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -35,7 +130,7 @@
               >+99 955 888 500</a
             >
           </div>
-          <div class="col">
+          <div class="header-info">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -57,12 +152,14 @@
             >
           </div>
         </div>
+
         <!-- logo -->
-        <div class="col-2 text-center">
+        <div class="col col-md-2 text-center">
           <img src="assets/logo-s.png" height="42" />
         </div>
+
         <!-- reserve button -->
-        <div class="col-5 text-end">
+        <div class="col col-md-5 text-end">
           <button class="btn btn-sm btn-dark rounded-5">
             <div class="mx-2">
               RESERVE
@@ -82,75 +179,80 @@
           </button>
         </div>
       </div>
-      <!-- second row -->
-      <hr class="align-self-stretch m-0 opacity-100" />
-      <nav class="row text-center py-1" style="height: 34px">
-        <div class="col">
-          <a
-            href="index.html"
-            class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            >HOME</a
-          >
-        </div>
-        <div class="col">
-          <a
-            href="rooms.html"
-            class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            >ROOMS</a
-          >
-        </div>
-        <div class="col">
-          <a
-            href="services.html"
-            class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            ><b>SERVICES</b></a
-          >
-        </div>
-        <div class="col">
-          <a
-            href="reservation.html"
-            class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            >RESERVATION</a
-          >
-        </div>
-      </nav>
-      <hr class="align-self-stretch m-0 opacity-100" />
+
+      <!-- SECOND ROW -->
+      <div class="row header-bottom">
+        <nav class="nav justify-content-center">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="rooms.html">Rooms</a>
+          <a class="nav-link active" href="services.html">Services</a>
+          <a class="nav-link" href="reservation.html">Reservation</a>
+          <!-- <div class="col">
+              <a
+                href="index.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                ><b>HOME</b></a
+              >
+            </div>
+            <div class="col">
+              <a
+                href="rooms.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >ROOMS</a
+              >
+            </div>
+            <div class="col">
+              <a
+                href="services.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >SERVICES</a
+              >
+            </div>
+            <div class="col">
+              <a
+                href="reservation.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >RESERVATION</a
+              >
+            </div> -->
+        </nav>
+      </div>
+      <!-- <hr class="align-self-stretch m-0 opacity-100" /> -->
     </header>
+    <!-- MAIN -->
     <main>
-      <article class="ma" style="padding: 25px 75px">
+      <article class="content-block">
         <!-- dining -->
-        <section class="ma-header">
-          <div class="">
-            <small>Scenic dining</small>
-          </div>
+        <section class="content-title-short-left">
+          <h6>Scenic dining</h6>
         </section>
-        <section class="ma-main">
-          <div class="d-flex flex-col text-start">
-            <div class="col-6">
-              <h2>Welcome to The View</h2>
-            </div>
-            <div class="col-6 px-5">
-              <h6>
-                Indulge in the harmonious fusion of authentic local cuisine at
-                our on-site restaurant and bar. With a picturesque ocean
-                backdrop, our dining venue offers breakfast, lunch, and dinner,
-                while the bar remains open throughout the day until late,
-                ensuring a delightful culinary experience from dawn till dusk.
-              </h6>
-            </div>
+        <section class="content-title-text">
+          <div class="col-md-7">
+            <h1>Welcome to The View</h1>
+          </div>
+          <div class="col-md-5">
+            <h6>
+              Indulge in the harmonious fusion of authentic local cuisine at
+              our on-site restaurant and bar. With a picturesque ocean
+              backdrop, our dining venue offers breakfast, lunch, and dinner,
+              while the bar remains open throughout the day until late,
+              ensuring a delightful culinary experience from dawn till dusk.
+            </h6>
           </div>
         </section>
       </article>
-      <article>
-        <section style="width: 100%">
-          <img src="assets/dining.jpg" class="w-100" />
+      <!-- dining image -->
+      <article class="content-image-full">
+        <section>
+          <img src="assets/dining.jpg" />
         </section>
       </article>
-      <article class="ma bg-light" style="padding: 50px 75px">
-        <section class="row ma-header">
-          <small>Western classics and Asian favorites</small>
+
+      <article class="content-block bg-light">
+        <section class="content-title-short">
+          <h6>Western classics and Asian favorites</h6>
         </section>
-        <section class="row ma-main">
+        <section class="content-title">
           <h2>
             Our skilled chefs have meticulously curated a menu of exquisite
             traditional dishes, thoughtfully complemented by a selection of
@@ -159,109 +261,145 @@
             experience
           </h2>
         </section>
-        <section class="row ma-footer">
-          <h6>
+        <section class="content-text">
+          <h5>
             We take pride in using only the finest locally sourced ingredients
             in all our dishes. For reservations, please call us at +99 955 888
             500, or feel free to reserve in person at your convenience.
-          </h6>
+          </h5>
         </section>
       </article>
+
       <!-- spa -->
-      <article class="ma" style="padding: 25px 75px">
-        <section class="ma-header">
-          <div class="">
-            <small>Rejuvenating spa experience</small>
-          </div>
+      <article class="content-block">
+        <section class="content-title-short-left">
+          <h6>Rejuvenating spa experience</h6>
         </section>
-        <section class="ma-main">
-          <div class="d-flex flex-col text-start">
-            <div class="col-6">
-              <h2>Jai Spa</h2>
-            </div>
-            <div class="col-6 px-5">
-              <h6>
-                Escape to a serene and rejuvenating sanctuary to fulfill all
-                your wellness desires. At The Jai Spa, indulge in a variety of
-                treatments including wraps, facials, traditional massages, and
-                foot reflexology, all customized to cater to your specific
-                needs. Let our seasoned therapists guide you on a journey to
-                relaxation and detoxification, allowing you to pamper yourself
-                to the fullest.
-              </h6>
-            </div>
+        <section class="content-title-text">
+          <div class="col-md-7">
+            <h1>Jai Spa</h1>
+          </div>
+          <div class="col-md-5">
+            <h6>
+              Escape to a serene and rejuvenating sanctuary to fulfill all
+              your wellness desires. At The Jai Spa, indulge in a variety of
+              treatments including wraps, facials, traditional massages, and
+              foot reflexology, all customized to cater to your specific
+              needs. Let our seasoned therapists guide you on a journey to
+              relaxation and detoxification, allowing you to pamper yourself
+              to the fullest.
+            </h6>
           </div>
         </section>
       </article>
-      <article>
-        <section style="width: 100%">
-          <img src="assets/spa.jpg" class="w-100" />
+      <!-- spa image -->
+      <article class="content-image-full">
+        <section>
+          <img src="assets/spa.jpg"/>
         </section>
       </article>
-      <article class="ma bg-light" style="padding: 50px 75px">
-        <section class="row ma-header">
-          <small>All-natural ingredients</small>
+
+      <article class="content-block bg-light">
+        <section class="content-title-short">
+          <h6>All-natural ingredients</h6>
         </section>
-        <section class="row ma-main">
+        <section class="content-title">
           <h2>
             At our hotel and spa, we exclusively utilize all-natural ingredients
             and products meticulously tailored to suit your individual needs.
           </h2>
         </section>
-        <section class="row ma-footer">
-          <h6>
+        <section class="content-text">
+          <h5>
             Conveniently nestled within the resort, the Jai Spa offers a
             romantic retreat for couples or a tranquil escape for those seeking
             a quick massage to unwind. Explore our couples and friends’
             packages, designed to help you relax and rejuvenate alongside your
             favorite person.
-          </h6>
+          </h5>
+        </section>
+        <section class="content-table">
+          <div class="content-table-title">
+            <h5>Spa menu</h5>
+          </div>
+          <div class="bg-white p-3 rounded content-table-data">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Service</th>
+                  <th scope="col">Duration</th>
+                  <th scope="col">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Traditional Massage</td>
+                  <td>60 mins</td>
+                  <td>$80</td>
+                </tr>
+                <tr>
+                  <td>Aromatherapy Massage</td>
+                  <td>60 mins</td>
+                  <td>$90</td>
+                </tr>
+                <tr>
+                  <td>Hot Stone Massage</td>
+                  <td>75 mins</td>
+                  <td>$100</td>
+                </tr>
+                <tr>
+                  <td>Deep Tissue Massage</td>
+                  <td>60 mins</td>
+                  <td>$95</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
       </article>
+
       <!-- activities -->
-      <article class="ma" style="padding: 25px 75px">
-        <section class="ma-header">
-          <div class="">
-            <small>Activities</small>
-          </div>
+      <article class="content-block">
+        <section class="content-title-short-left">
+          <h6>Activities</h6>
         </section>
-        <section class="ma-main">
-          <div class="d-flex flex-col text-start">
-            <div class="col-6">
-              <h2>Diverse range of excursions</h2>
-            </div>
-            <div class="col-6 px-5">
-              <h6>
-                From breathtaking beaches and exhilarating water sports to
-                enriching cultural experiences like temple visits and exploring
-                local markets, the island offers something for every traveler.
-                Food enthusiasts can delight in authentic local cuisine, while
-                those craving relaxation can luxuriate in our opulent spa.
-                Adventure seekers can embark on hikes through verdant forests or
-                embark on elephant safaris, while night owls can revel in the
-                island's vibrant nightlife.
-              </h6>
-            </div>
+        <section class="content-title-text">
+          <div class="col-md-7">
+            <h1>Diverse range of excursions</h1>
+          </div>
+          <div class="col-md-5">
+            <h6>
+              From breathtaking beaches and exhilarating water sports to
+              enriching cultural experiences like temple visits and exploring
+              local markets, the island offers something for every traveler.
+              Food enthusiasts can delight in authentic local cuisine, while
+              those craving relaxation can luxuriate in our opulent spa.
+              Adventure seekers can embark on hikes through verdant forests or
+              embark on elephant safaris, while night owls can revel in the
+              island's vibrant nightlife.
+            </h6>
           </div>
         </section>
       </article>
-      <article>
-        <section style="width: 100%">
-          <img src="assets/activities.jpg" class="w-100" />
+      <!-- activities image -->
+      <article class="content-image-full">
+        <section>
+          <img src="assets/activities.jpg"/>
         </section>
       </article>
-      <article class="ma bg-light" style="padding: 50px 75px">
-        <section class="row ma-header">
-          <small>Guest Relations</small>
+
+      <article class="content-block bg-light">
+        <section class="content-title-short">
+          <h6>Guest Relations</h6>
         </section>
-        <section class="row ma-main">
+        <section class="content-title">
           <h2>
             Uncover the essence of the island through exclusive insider
             recommendations.
           </h2>
         </section>
-        <section class="row ma-footer">
-          <h6>
+        <section class="content-text">
+          <h5>
             With profound familiarity of this breathtaking island, our dedicated
             Guest Relations team is poised to offer tailor-made suggestions for
             dining, entertainment, and activities. Always at your service, they
@@ -270,14 +408,74 @@
             establishments. With an unwavering commitment to exceptional service
             and meticulous attention to detail, our team ensures that every
             guest enjoys an unforgettable stay.
-          </h6>
+          </h5>
+        </section>
+        <section class="content-picture-triple">
+          <div class="row image-container">
+            <div class="col-4">
+              <div id="act-img1-modal" class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <img class="rounded" src="assets/activities-cultural.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <a href="#act-img1-modal" data-bs-toggle="modal">
+                <img class="rounded mw-100" src="assets/activities-cultural-thumb.png" alt="">
+              </a>
+            </div>
+            <div class="col-4">
+              <div id="act-img2-modal" class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <img class="rounded" src="assets/activities-adventure.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <a href="#act-img2-modal" data-bs-toggle="modal">
+                <img class="rounded mw-100" src="assets/activities-adventure-thumb.png" alt="">
+              </a>
+            </div>
+            <div class="col-4">
+              <div id="act-img3-modal" class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <img class="rounded" src="assets/activities-scenic.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <a href="#act-img3-modal" data-bs-toggle="modal">
+                <img class="rounded mw-100" src="assets/activities-scenic-thumb.png" alt="">
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="content-desc-triple">
+          <div class="row">
+            <div class="col-4">
+              <h5>Cultural</h5>
+              <p>Marvel at the majestic serenity of the Buddha Temple, dive into the vibrant ambiance of the night markets, embark on an adventure of discovery and indulge in the rich tapestry of experiences that await you.</p>
+            </div>
+            <div class="col-4">
+              <h5>Adventure</h5>
+              <p>Delve into the heart of nature with visits to elephant sanctuaries. Take your adventure to new heights with treetop zip lining and exciting tours of navigating rugged terrains and scenic trails.</p>
+            </div>
+            <div class="col-4">
+              <h5>Scenic</h5>
+              <p>Embark on a voyage of discovery through the enchanting waters with long-tail boat excursions. Journey off the beaten path and immerse yourself in the island's lush hinterlands.</p>
+            </div>
+          </div>
         </section>
       </article>
     </main>
-    <footer class="bg-black text-white">
-      <div class="d-flex py-5 px-5">
-        <div class="col container text-left">
-          <div class="row"><p>Location</p></div>
+    <!-- FOOTER -->
+    <footer>
+      <div class="row footer-container">
+        <div class="col-5">
+          <div class="row footer-title"><p>Location</p></div>
           <div class="row">
             <p>
               Azure Bay Retreat<br />
@@ -288,42 +486,53 @@
             </p>
           </div>
         </div>
-        <div class="col container text-center">
-          <div class="row"><p>Reserve</p></div>
+        <div class="col-3">
+          <div class="row footer-title"><p>Reserve</p></div>
           <div class="row">
-            <p>
+            <div>
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                fill="currentColor"
-                class="bi bi-telephone-fill"
-                viewBox="0 0 18 18"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
-                /></svg
-              >+99 955 888 500<br />
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              fill="currentColor"
+              class="bi bi-telephone-fill"
+              viewBox="0 0 18 18"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+              />
+            </svg>
+            <a
+              href="#"
+              class="link-light link-offset-1 link-underline-opacity-0 link-underline-opacity-100-hover"
+              >+99 955 888 500</a
+            >
+            </div>
+            <div>
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                fill="currentColor"
-                class="bi bi-envelope-at-fill"
-                viewBox="0 0 18 18"
-              >
-                <path
-                  d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"
-                />
-                <path
-                  d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"
-                /></svg
-              >info@pvmhotel.com
-            </p>
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              fill="currentColor"
+              class="bi bi-envelope-at-fill"
+              viewBox="0 0 18 18"
+            >
+              <path
+                d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"
+              />
+              <path
+                d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"
+              />
+            </svg>
+            <a
+              href="#"
+              class="link-light link-offset-1 link-underline-opacity-0 link-underline-opacity-100-hover"
+              >info@pvmhotel.com</a
+            >
+            </div>
           </div>
         </div>
-
-        <div class="col container text-end">
-          <div class="row"><p>Connect with us</p></div>
+        <div class="col-4 text-end">
+          <div class="row footer-title"><p>Connect with us</p></div>
           <div class="row">
             <div class="col">
               <svg
