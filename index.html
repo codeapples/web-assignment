@@ -8,15 +8,109 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <header class="d-flex flex-column justi align-items-center z-5">
-      <!-- first row -->
-      <div
-        class="row container py-3 w-100 align-items-center"
-        style="height: 75px"
-      >
-        <!-- contact info -->
-        <div class="col-5 text-start container-fluid">
-          <div class="col">
+    <!-- HEADER -->
+    <header>
+      <!-- TOP ROW -->
+      <div class="row header-top">
+        <!-- hamburger & contact info -->
+        <div class="col col-md-5 info-container">
+          <!-- mobile only nav - hamburget & overlay -->
+          <nav class="navbar navbar-mobile">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNav"
+              aria-controls="offcanvasNav"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="offcanvas offcanvas-start text-bg-light"
+              tabindex="-1"
+              id="offcanvasNav"
+            >
+              <div class="offcanvas-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Rooms</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#"
+                      >Services</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#"
+                      >Reservation</a
+                    >
+                  </li>
+                </ul>
+
+                <!-- social icons in the middle below -->
+                <div class="nav-socials">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                  >
+                    <g fill="currentColor">
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10m-3 5a3 3 0 1 0 6 0a3 3 0 0 0-6 0"
+                        clip-rule="evenodd"
+                      />
+                      <path d="M18 5a1 1 0 1 0 0 2a1 1 0 0 0 0-2" />
+                      <path
+                        fill-rule="evenodd"
+                        d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zm14 2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"
+                        clip-rule="evenodd"
+                      />
+                    </g>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M8 3a2 2 0 0 1 2 2v3h6a2 2 0 1 1 0 4h-6v2a3 3 0 0 0 3 3h3a2 2 0 1 1 0 4h-3a7 7 0 0 1-7-7V5a2 2 0 0 1 2-2"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+              </div>
+            </div>
+          </nav>
+          <div class="header-info">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -35,7 +129,7 @@
               >+99 955 888 500</a
             >
           </div>
-          <div class="col">
+          <div class="header-info">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -57,12 +151,14 @@
             >
           </div>
         </div>
+
         <!-- logo -->
-        <div class="col-2 text-center">
+        <div class="col col-md-2 text-center">
           <img src="assets/logo-s.png" height="42" />
         </div>
+
         <!-- reserve button -->
-        <div class="col-5 text-end">
+        <div class="col col-md-5 text-end">
           <button class="btn btn-sm btn-dark rounded-5">
             <div class="mx-2">
               RESERVE
@@ -82,89 +178,149 @@
           </button>
         </div>
       </div>
-      <!-- second row -->
-      <hr class="align-self-stretch m-0 opacity-100" />
-      <nav class="row text-center py-1" style="height: 34px">
-        <div class="col">
-          <a
-            href="index.html"
-            class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            ><b>HOME</b></a
-          >
-        </div>
-        <div class="col">
-          <a
-            href="rooms.html"
-            class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            >ROOMS</a
-          >
-        </div>
-        <div class="col">
-          <a
-            href="services.html"
-            class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            >SERVICES</a
-          >
-        </div>
-        <div class="col">
-          <a
-            href="reservation.html"
-            class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            >RESERVATION</a
-          >
-        </div>
-      </nav>
-      <hr class="align-self-stretch m-0 opacity-100" />
+
+      <!-- SECOND ROW -->
+      <div class="row header-bottom">
+        <nav class="nav justify-content-center">
+          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link" href="rooms.html">Rooms</a>
+          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="reservation.html">Reservation</a>
+          <!-- <div class="col">
+              <a
+                href="index.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                ><b>HOME</b></a
+              >
+            </div>
+            <div class="col">
+              <a
+                href="rooms.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >ROOMS</a
+              >
+            </div>
+            <div class="col">
+              <a
+                href="services.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >SERVICES</a
+              >
+            </div>
+            <div class="col">
+              <a
+                href="reservation.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >RESERVATION</a
+              >
+            </div> -->
+        </nav>
+      </div>
+      <!-- <hr class="align-self-stretch m-0 opacity-100" /> -->
     </header>
+    <!-- MAIN -->
     <main>
       <!-- video -->
-      <div class="position-relative" style="height: 950px">
-        <!-- <div
-          class="postition-absolute z-1"
-          style="height: 100%; top: 0; background-color: rgba(0, 0, 0, 0.2)"
-        ></div> -->
-        <video
-          class="position-absolute"
-          src="assets/frontpage.mp4"
-          autoplay
-          muted
-          loop
-          playinline
-          style="height: 100%; width: 100%; object-fit: cover"
-        ></video>
-        <div
-          id="video-overlay"
-          class="d-flex flex-column position-relative text-white text-center m-0 justify-content-center align-items-center"
-        >
-          <h1 style="font-size: 80px">Your definitive tropical retreat</h1>
-          <button
-            type="button"
-            class="btn btn-outline-light rounded-5 fs-6"
-            style="width: 200px"
-          >
-            RESERVE TODAY
-          </button>
+      <div class="video-container">
+        <video src="assets/frontpage.mp4" autoplay muted loop></video>
+        <div class="video-overlay">
+          <h1>Your definitive tropical retreat</h1>
+          <a href="reservation.html">
+            <button type="button" class="btn btn-outline-light rounded-5 fs-6">
+              RESERVE TODAY
+            </button>
+          </a>
         </div>
       </div>
-      <article class="ma">
-        <section class="row ma-header">
+
+      <article class="content-block">
+        <section class="content-title-short">
           <h5>Discover the most beautiful island</h5>
         </section>
-        <section class="row ma-main">
-          <!-- <h1>Perched on a hill, our wellness resort on this magical island</h1>
-          <h1>
-            features rooms with captivating ocean views and provides access to
-          </h1>
-          <h1>
-            loveliest beaches and locales reminiscent of a dreamlike paradise.
-          </h1> -->
+        <section class="content-title">
           <h1>
             Perched on a hill, our wellness resort on this magical island
             features rooms with captivating ocean views and provides access to
             loveliest beaches and locales reminiscent of a dreamlike paradise.
           </h1>
         </section>
-        <section class="row ma-footer">
+        <section class="content-text">
+          <h5>
+            Explore special packages tailored for couples and groups, along with
+            wellness activities to create a distinctive experience. Enjoy our
+            pool, gym, spa, and designated coworking space, providing all the
+            amenities for an unparalleled journey
+          </h5>
+        </section>
+      </article>
+      <article class="content-block text-bg-light">
+        <section class="content-title-short">
+          <h5>The breathtaking Pavamana Resort Hotel</h5>
+        </section>
+        <section
+          class="content-title-text"
+        >
+        <div class="col-7">
+          <h2>
+            Pavamana spa resort provides guests with breathtaking panoramic
+            views of the enchanting coastline of the island, a realm of
+            unparalleled beauty.
+          </h2>
+        </div>
+        <div class="col-5">
+          <h5>
+            Nestled in a peaceful setting, we are conveniently close to
+            various shops, a variety of local eateries, and some of the most
+            breathtaking beaches you'll ever encounter. Our wellness hotel is
+            complemented by the opulent Jai Spa, where you can indulge in
+            massages and other rejuvenating therapies.
+          </h5>
+        </div>
+        </section>
+        <section class="content-picture-triple">
+          <div class="row image-container">
+            <div class="col-4">
+              <div id="home-img1-modal" class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <img class="rounded" src="assets/front-img1.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <a href="#home-img1-modal" data-bs-toggle="modal">
+                <img class="rounded" src="assets/front-img1-thumb.png" alt="">
+              </a>
+            </div>
+            <div class="col-4">
+              <div id="home-img2-modal" class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <img class="rounded" src="assets/front-img2.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <a href="#home-img2-modal" data-bs-toggle="modal">
+                <img class="rounded" src="assets/front-img2-thumb.png" alt="">
+              </a>
+            </div>
+            <div class="col-4">
+              <div id="home-img3-modal" class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <img class="rounded" src="assets/front-img3.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <a href="#home-img3-modal" data-bs-toggle="modal">
+                <img class="rounded" src="assets/front-img3-thumb.png" alt="">
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="content-text">
           <h5>
             Explore special packages tailored for couples and groups, along with
             wellness activities to create a distinctive experience. Enjoy our
@@ -173,44 +329,26 @@
           </h5>
         </section>
       </article>
-      <article class="text-bg-light ma">
-        <section class="row ma-header">
-          <h5>The breathtaking Pavamana Resort Hotel</h5>
+      <article class="content-block">
+        <section class="content-title-short">
+          <h5>Your stay in paradise</h5>
         </section>
-        <section
-          class="row ma-main d-flex flex-row text-start justify-content-center align-items-center"
-        >
-          <div class="col px-5 mx-5">
-            <h3>
-              Pavamana spa resort provides guests with breathtaking panoramic
-              views of the enchanting coastline of the island, a realm of
-              unparalleled beauty.
-            </h3>
-          </div>
-          <div class="col px-5 mx-5">
-            <h5>
-              Nestled in a peaceful setting, we are conveniently close to
-              various shops, a variety of local eateries, and some of the most
-              breathtaking beaches you'll ever encounter. Our wellness hotel is
-              complemented by the opulent Jai Spa, where you can indulge in
-              massages and other rejuvenating therapies.
-            </h5>
-          </div>
+        <section class="content-title">
+          <h1>
+            Spacious guest accommodations equipped with contemporary conveniences and captivating vistas
+          </h1>
         </section>
-        <section class="row ma-footer">
+        <section class="content-text">
           <h5>
-            Explore special packages tailored for couples and groups, along with
-            wellness activities to create a distinctive experience. Enjoy our
-            pool, gym, spa, and designated coworking space, providing all the
-            amenities for an unparalleled journey.
+            Impeccably designed to invite abundant natural light, our guest rooms and suites stand as a testament to spacious elegance. Our rooms are among the most expansive on the island. Each room boasts a private terrace or balcony, affording serene vistas of both the ocean and lush garden landscapes.
           </h5>
         </section>
       </article>
     </main>
-    <footer class="bg-black text-white">
-      <div class="d-flex py-5 px-5">
-        <div class="col container text-left">
-          <div class="row"><p>Location</p></div>
+    <footer>
+      <div class="row footer-container">
+        <div class="col-5">
+          <div class="row footer-title"><p>Location</p></div>
           <div class="row">
             <p>
               Azure Bay Retreat<br />
@@ -221,42 +359,53 @@
             </p>
           </div>
         </div>
-        <div class="col container text-center">
-          <div class="row"><p>Reserve</p></div>
+        <div class="col-3">
+          <div class="row footer-title"><p>Reserve</p></div>
           <div class="row">
-            <p>
+            <div>
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                fill="currentColor"
-                class="bi bi-telephone-fill"
-                viewBox="0 0 18 18"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
-                /></svg
-              >+99 955 888 500<br />
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              fill="currentColor"
+              class="bi bi-telephone-fill"
+              viewBox="0 0 18 18"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+              />
+            </svg>
+            <a
+              href="#"
+              class="link-light link-offset-1 link-underline-opacity-0 link-underline-opacity-100-hover"
+              >+99 955 888 500</a
+            >
+            </div>
+            <div>
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                fill="currentColor"
-                class="bi bi-envelope-at-fill"
-                viewBox="0 0 18 18"
-              >
-                <path
-                  d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"
-                />
-                <path
-                  d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"
-                /></svg
-              >info@pvmhotel.com
-            </p>
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              fill="currentColor"
+              class="bi bi-envelope-at-fill"
+              viewBox="0 0 18 18"
+            >
+              <path
+                d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"
+              />
+              <path
+                d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"
+              />
+            </svg>
+            <a
+              href="#"
+              class="link-light link-offset-1 link-underline-opacity-0 link-underline-opacity-100-hover"
+              >info@pvmhotel.com</a
+            >
+            </div>
           </div>
         </div>
-
-        <div class="col container text-end">
-          <div class="row"><p>Connect with us</p></div>
+        <div class="col-4 text-end">
+          <div class="row footer-title"><p>Connect with us</p></div>
           <div class="row">
             <div class="col">
               <svg
