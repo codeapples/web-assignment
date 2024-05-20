@@ -112,6 +112,8 @@ header {
 
 .logo-container {
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .logo-container > img {
@@ -290,6 +292,18 @@ main {
 @media (min-width: 992px) {
   .content-block {
     padding: 1.75rem 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-block {
+    padding: 2.75rem 8rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .content-block {
+    padding: 4rem 12rem;
   }
 }
 
