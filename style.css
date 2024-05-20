@@ -342,9 +342,7 @@ main {
 }
 
 .content-block .content-text {
-  /* text-align: center; */
   padding-bottom: 1rem;
-  /* font-style: italic; */
 }
 
 .content-block .content-title-text {
@@ -374,6 +372,11 @@ main {
 
 .content-block .content-title-text p {
   text-align: left;
+  padding-bottom: 1rem;
+}
+
+.content-block .content-title-text .btn {
+  max-width: 24em;
 }
 
 .content-block .content-picture-triple {
@@ -400,7 +403,15 @@ main {
 
 .content-block .content-desc-triple {
   display: flex;
+  flex-direction: column;
 }
+
+@media (min-width: 576px) {
+  .content-block .content-desc-triple {
+    flex-direction: row;
+  }
+}
+
 
 .content-block .content-desc-triple h5 {
   text-align: center;
@@ -455,10 +466,6 @@ main {
   padding-bottom: 0.5rem;
 }
 
-.content-block .content-table .content-table-data {
-  /* font-size: 1.25em; */
-}
-
 .content-block .content-form-info {
   width: 100%;
   display: flex;
@@ -490,7 +497,6 @@ main {
 }
 
 .content-block .content-form-info .content-info-column p {
-  /* font-size: 1.25em; */
   line-height: normal;;
   padding-bottom: 2rem;
 }
@@ -515,7 +521,6 @@ main {
 }
 
 .content-block .content-form-info .content-form-column form .misc-options {
-  /* font-size: 1.25em; */
   display: flex;
   flex-direction: row;
   padding: 1rem 2rem;
