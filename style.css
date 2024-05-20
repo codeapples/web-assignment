@@ -30,6 +30,22 @@ header {
   z-index: 1000;
 }
 
+#skip a {
+  position: absolute;
+  top: -2rem;
+  left: 2rem;
+}
+
+#skip a:focus {
+  top: 0;
+}
+
+@media print {
+  #skip {
+    display: none;
+  }
+}
+
 .header-top {
   display: flex;
   justify-content: space-between;
@@ -202,6 +218,12 @@ main {
   overflow: hidden;
   position: relative;
   height: 75vh;
+}
+
+@media print {
+  .video-container {
+    display: none !important;
+  }
 }
 
 .video-container > video {

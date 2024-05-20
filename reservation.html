@@ -7,10 +7,14 @@
     <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
     <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="accessibility.js"></script>
   </head>
   <body>
     <!-- HEADER -->
     <header>
+      <nav id="skip">
+        <a class="link-dark" href="#reservation-intro">Skip header</a>
+      </nav>
       <!-- TOP ROW -->
       <div class="header-top">
         <!-- hamburger & contact info -->
@@ -324,7 +328,7 @@
     </header>
     <!-- MAIN -->
     <main>
-      <article class="content-block">
+      <article id="reservation-intro" class="content-block">
         <section class="content-title-short-left">
           <h6>Contact</h6>
         </section>
@@ -341,7 +345,7 @@
         </section>
       </article>
 
-      <article class="content-block bg-light">
+      <article id="reservation-form" class="content-block bg-light">
         <section class="content-form-info">
           <div class="row">
             <aside class="col-md-3 content-info-column">
@@ -523,7 +527,7 @@
         </section>
       </article>
 
-      <article class="content-block">
+      <article id="reservation-help" class="content-block">
         <section class="content-picture-title-desc">
           <div class="image-container">
             <img

@@ -7,11 +7,15 @@
     <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
     <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="accessibility.js"></script>
   </head>
 
   <body>
     <!-- HEADER -->
     <header>
+      <nav id="skip">
+        <a class="link-dark" href="#dining">Skip header</a>
+      </nav>
       <!-- TOP ROW -->
       <div class="header-top">
         <!-- hamburger & contact info -->
@@ -328,7 +332,7 @@
     </header>
     <!-- MAIN -->
     <main>
-      <article class="content-block">
+      <article id="dining" class="content-block">
         <!-- dining -->
         <section class="content-title-short-left">
           <h6>Scenic dining</h6>
@@ -381,7 +385,7 @@
       </article>
 
       <!-- spa -->
-      <article class="content-block">
+      <article id="spa" class="content-block">
         <section class="content-title-short-left">
           <h6>Rejuvenating spa experience</h6>
         </section>
@@ -472,7 +476,7 @@
       </article>
 
       <!-- activities -->
-      <article class="content-block">
+      <article id="activities" class="content-block">
         <section class="content-title-short-left">
           <h6>Activities</h6>
         </section>
