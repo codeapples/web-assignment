@@ -7,25 +7,43 @@
     <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
     <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="accessibility.js"></script>
   </head>
   <body>
     <!-- HEADER -->
     <header>
       <!-- TOP ROW -->
-      <div class="row header-top">
+      <div class="header-top">
         <!-- hamburger & contact info -->
-        <div class="col col-md-5 info-container">
+        <div class="col-md-5 info-container">
           <!-- mobile only nav - hamburget & overlay -->
           <nav class="navbar navbar-mobile">
             <button
-              class="navbar-toggler"
+              class="hamburger btn btn-link"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasNav"
               aria-controls="offcanvasNav"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <svg
+                class="open"
+                height="18"
+                viewBox="0 0 24 18"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  fill="none"
+                  stroke="#1a1a1a"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                >
+                  <path d="m1 9h22"></path>
+                  <path d="m1 1h17"></path>
+                  <path d="m0 0h11" transform="translate(1 17)"></path>
+                </g>
+              </svg>
             </button>
             <div
               class="offcanvas offcanvas-start text-bg-light"
@@ -41,7 +59,51 @@
                 ></button>
               </div>
               <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <div class="offcanvas-accessibility-container">
+                  <!-- high contrast -->
+                  <a href="javascript:highContrast();" class="link-dark">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12 21.997c-5.523 0-10-4.477-10-10s4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10m0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16m0-2v-12a6 6 0 0 1 0 12"
+                      />
+                    </svg>
+                  </a>
+                  <!-- decrease font size -->
+                  <a href="javascript:decreaseFontSize();" class="link-dark">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M16.255 2.195a.75.75 0 0 0-1.01 1.11l2.75 2.5a.75.75 0 0 0 1.01 0l2.75-2.5a.75.75 0 1 0-1.01-1.11L18.5 4.236zM12 4a.75.75 0 0 1 .697.474l5.75 14.5a.75.75 0 0 1-1.394.552L15.258 15H8.742l-1.795 4.526a.75.75 0 1 1-1.394-.553l5.75-14.5A.75.75 0 0 1 12 4m0 2.785L9.337 13.5h5.326z"
+                      />
+                    </svg>
+                  </a>
+                  <!-- increase font size -->
+                  <a href="javascript:increaseFontSize();" class="link-dark">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M15.195 5.754a.75.75 0 0 0 1.06.05l2.245-2.04l2.246 2.04a.75.75 0 0 0 1.009-1.109l-2.75-2.5a.75.75 0 0 0-1.01 0l-2.75 2.5a.75.75 0 0 0-.05 1.06M12 4a.75.75 0 0 1 .697.473l5.75 14.5a.75.75 0 0 1-1.394.553L15.258 15H8.742l-1.795 4.526a.75.75 0 1 1-1.394-.553l5.75-14.5A.75.75 0 0 1 12 4m-2.663 9.5h5.326L12 6.785z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <ul class="navbar-nav justify-content-end pe-3">
                   <li class="nav-item">
                     <a
                       class="nav-link active"
@@ -169,38 +231,99 @@
         </div>
 
         <!-- logo -->
-        <div class="col col-md-2 text-center">
-          <img src="assets/logo-s.png" height="42" alt="Company logo" />
+        <div class="col-md-2 logo-container">
+          <img src="assets/logo-s.png" alt="Company logo" />
         </div>
 
         <!-- reserve button -->
-        <div class="col col-md-5 text-end">
-          <button class="btn btn btn-dark rounded-5">
-            Book
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              fill="currentColor"
-              class="bi bi-arrow-right"
-              viewBox="0 0 18 18"
+        <div class="col-md-5">
+          <div class="header-btn-container">
+            <a
+              href="reservation.html"
+              role="button"
+              class="btn btn-dark btn-sm"
             >
-              <path
-                fill-rule="evenodd"
-                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-              />
-            </svg>
-          </button>
+              Book →
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- SECOND ROW -->
-      <div class="row header-bottom">
-        <nav class="nav justify-content-center">
-          <a class="nav-link active" href="index.html">Home</a>
-          <a class="nav-link" href="rooms.html">Rooms</a>
-          <a class="nav-link" href="services.html">Services</a>
-          <a class="nav-link" href="reservation.html">Reservation</a>
-        </nav>
+      <div class="header-bottom">
+        <div class="col-2 p-0">
+          <div class="header-bottom-container">
+            <!-- high contrast -->
+            <a
+              id="high-contrast-icon"
+              href="javascript:highContrast();"
+              class="link-dark"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 21.997c-5.523 0-10-4.477-10-10s4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10m0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16m0-2v-12a6 6 0 0 1 0 12"
+                />
+              </svg>
+            </a>
+            <span id="high-contrast-label">high contrast</span>
+          </div>
+        </div>
+        <div class="col-8 p-0 m-0">
+          <nav class="nav justify-content-center">
+            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="rooms.html">Rooms</a>
+            <a class="nav-link" href="services.html">Services</a>
+            <a class="nav-link" href="reservation.html">Reservation</a>
+          </nav>
+        </div>
+        <div class="col-2">
+          <div class="header-bottom-container justify-content-end">
+            <span id="font-increase-label">font size +</span>
+            <span id="font-decrease-label">font size -</span>
+            <!-- decrease font size -->
+            <a
+              id="font-decrease-icon"
+              href="javascript:decreaseFontSize();"
+              class="link-dark"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M16.255 2.195a.75.75 0 0 0-1.01 1.11l2.75 2.5a.75.75 0 0 0 1.01 0l2.75-2.5a.75.75 0 1 0-1.01-1.11L18.5 4.236zM12 4a.75.75 0 0 1 .697.474l5.75 14.5a.75.75 0 0 1-1.394.552L15.258 15H8.742l-1.795 4.526a.75.75 0 1 1-1.394-.553l5.75-14.5A.75.75 0 0 1 12 4m0 2.785L9.337 13.5h5.326z"
+                />
+              </svg>
+            </a>
+            <!-- increase font size -->
+            <a
+              id="font-increase-icon"
+              href="javascript:increaseFontSize();"
+              class="link-dark"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M15.195 5.754a.75.75 0 0 0 1.06.05l2.245-2.04l2.246 2.04a.75.75 0 0 0 1.009-1.109l-2.75-2.5a.75.75 0 0 0-1.01 0l-2.75 2.5a.75.75 0 0 0-.05 1.06M12 4a.75.75 0 0 1 .697.473l5.75 14.5a.75.75 0 0 1-1.394.553L15.258 15H8.742l-1.795 4.526a.75.75 0 1 1-1.394-.553l5.75-14.5A.75.75 0 0 1 12 4m-2.663 9.5h5.326L12 6.785z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </header>
     <!-- MAIN -->
@@ -214,7 +337,7 @@
             href="reservation.html"
             role="button"
             class="btn btn-outline-light rounded-5 fs-6"
-            >RESERVE TODAY
+            >Reserve Today →
           </a>
         </div>
       </div>
@@ -224,19 +347,19 @@
           <h6>Discover the most beautiful island</h6>
         </section>
         <section class="content-title">
-          <h1>
+          <h2>
             Perched on a hill, our wellness resort on this magical island
             features rooms with captivating ocean views and provides access to
             loveliest beaches and locales reminiscent of a dreamlike paradise.
-          </h1>
+          </h2>
         </section>
         <section class="content-text">
-          <h5>
+          <p>
             Explore special packages tailored for couples and groups, along with
             wellness activities to create a distinctive experience. Enjoy our
             pool, gym, spa, and designated coworking space, providing all the
             amenities for an unparalleled journey
-          </h5>
+          </p>
         </section>
       </article>
 
@@ -253,13 +376,13 @@
             </h2>
           </div>
           <div class="col-md-5">
-            <h5>
+            <p>
               Nestled in a peaceful setting, we are conveniently close to
               various shops, a variety of local eateries, and some of the most
               breathtaking beaches you'll ever encounter. Our wellness hotel is
               complemented by the opulent Jai Spa, where you can indulge in
               massages and other rejuvenating therapies.
-            </h5>
+            </p>
           </div>
         </section>
         <section class="content-picture-triple">
@@ -345,12 +468,12 @@
           </div>
         </section>
         <section class="content-text">
-          <h5>
+          <p>
             Explore special packages tailored for couples and groups, along with
             wellness activities to create a distinctive experience. Enjoy our
             pool, gym, spa, and designated coworking space, providing all the
             amenities for an unparalleled journey.
-          </h5>
+          </p>
         </section>
       </article>
 
@@ -359,26 +482,26 @@
           <h6>Your stay in paradise</h6>
         </section>
         <section class="content-title">
-          <h1>
+          <h2>
             Spacious guest accommodations equipped with contemporary
             conveniences and captivating vistas
-          </h1>
+          </h2>
         </section>
         <section class="content-text">
-          <h5>
+          <p>
             Impeccably designed to invite abundant natural light, our guest
             rooms and suites stand as a testament to spacious elegance. Our
             rooms are among the most expansive on the island. Each room boasts a
             private terrace or balcony, affording serene vistas of both the
             ocean and lush garden landscapes.
-          </h5>
+          </p>
         </section>
       </article>
     </main>
     <!-- FOOTER -->
     <footer>
       <div class="row footer-container">
-        <div class="col col-md-5">
+        <div class="col-4 col-md-5">
           <div class="row footer-title"><p>Location</p></div>
           <div class="row">
             <p>
@@ -390,7 +513,7 @@
             </p>
           </div>
         </div>
-        <div class="col col-md-3">
+        <div class="col-5 col-md-3">
           <div class="row footer-title"><p>Reserve</p></div>
           <div class="row">
             <div>
@@ -435,10 +558,10 @@
             </div>
           </div>
         </div>
-        <div class="col col-md-4 text-end">
-          <div class="row footer-title"><p>Connect with us</p></div>
+        <div class="col-3 col-md-4 text-end">
+          <div class="row footer-title"><p>Connect</p></div>
           <div class="row">
-            <div class="col">
+            <div class="socials-container">
               <a
                 href="https://instagram.com"
                 class="link-light link-underline-opacity-0"
